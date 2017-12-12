@@ -9,6 +9,15 @@
       <textarea matInput placeholder="Leave a comment"></textarea>
     </mat-form-field>
   </form> -->
+  
+
+  <p-dataGrid [value]="cars" [paginator]="true" [rows]="6">
+    <ng-template let-car pTemplate="item">
+        <div class="ui-g-12 ui-md-3">
+            data
+        </div>
+    </ng-template>
+</p-dataGrid>
 
   <button pButton type="button" label="Click"></button>
   <button pButton type="button" label="Success" class="ui-button-success"></button>

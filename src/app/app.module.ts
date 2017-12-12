@@ -11,7 +11,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'; 
 import{MatInputModule} from '@angular/material';
-import {ButtonModule} from 'primeng/primeng';
+import {ButtonModule,DataGridModule} from 'primeng/primeng';
+import { ProductDataService } from './product-data.service';
 
 
 const appRoutes: Routes = [
@@ -37,9 +38,10 @@ const appRoutes: Routes = [
     ButtonModule, 
     MatCheckboxModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DataGridModule
   ],
-  providers: [],
+  providers: [ProductDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

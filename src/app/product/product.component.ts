@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ProductDataService } from '../product-data.service';
+import {Header} from 'primeng/primeng';
+import {Footer} from 'primeng/primeng';
 
 
 
@@ -11,9 +13,12 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
  checked=true;
  indeterminate=false;
-  constructor() { }
+ cars;
+
+  constructor( private datasource:ProductDataService) { }
 
   ngOnInit() {
+    this.cars=this.datasource.getData();
   }
 
 }
