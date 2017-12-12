@@ -10,6 +10,8 @@ import { GalaryComponent } from './galary/galary.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'; 
+import{MatInputModule} from '@angular/material';
+import {ButtonModule} from 'primeng/primeng';
 
 
 const appRoutes: Routes = [
@@ -26,11 +28,16 @@ const appRoutes: Routes = [
     ProductComponent,
     ContactComponent,
     GalaryComponent
+    
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    BrowserAnimationsModule,MatButtonModule, MatCheckboxModule,FormsModule,ReactiveFormsModule
+    BrowserAnimationsModule,
+    ButtonModule, 
+    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
