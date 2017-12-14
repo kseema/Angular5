@@ -7,20 +7,23 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { GalaryComponent } from './galary/galary.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {FormsModule,ReactiveFormsModule} from '@angular/forms'; 
-import{MatInputModule} from '@angular/material';
-import {ButtonModule,DataGridModule} from 'primeng/primeng';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material';
+import { ButtonModule, DataGridModule } from 'primeng/primeng';
 import { ProductDataService } from './product-data.service';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 
 const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  {path: 'galary',component: GalaryComponent},  
-  {path: 'product',component: ProductComponent},
-  {path: 'contact',component: ContactComponent},
-  { path: '',redirectTo: '/home',pathMatch: 'full'} 
+  { path: 'galary', component: GalaryComponent },
+  { path: 'product', component: ProductComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 @NgModule({
   declarations: [
@@ -28,14 +31,16 @@ const appRoutes: Routes = [
     HomeComponent,
     ProductComponent,
     ContactComponent,
-    GalaryComponent
-    
+    GalaryComponent,
+    LoginComponent,
+    RegisterComponent
+
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     BrowserAnimationsModule,
-    ButtonModule, 
+    ButtonModule,
     MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
