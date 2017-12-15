@@ -1,0 +1,14 @@
+.my-awana-top-logo{
+    height:50px;
+    width:200px;
+}
+.left-side-login{
+    height:300px;
+    width:400px;
+    border-right:1px solid grey;
+    color:black;
+}
+.left-side-login h3{margin-top:50px;margin-left: 50px;}
+.login-input{width:70%;border-radius:2px;margin-bottom:15px;margin-left:50px;height:36px}
+.left-side-login input[type='checkbox']{margin-left:50px; margin-bottom:25px}
+.login-button{width:70%;border-radius:2px;margin-bottom:5px;margin-left:50px;background:#47bfa6;height:42px;}

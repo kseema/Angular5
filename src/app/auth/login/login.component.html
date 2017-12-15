@@ -1,12 +1,21 @@
 <div>
 
-  <h1>Welcome to Awana!</h1>
+  <!-- <div class="my-awana-top-logo"><img src="..\src\Capture1.PNG"/></div> -->
 
-<label>User Name :</label><input type="text" [(ngModel)]="userName" />
-<br>
-<label>Password :</label><input type="password" [(ngModel)]="password" />
-<br>
-<input type="button" value ="Login" (click)="loginauth()"/>
+<!-- left side of page -->
+<div class="left-side-login">
+  <h3 style="margin-top:50px">Login</h3>
+  
+    <input class="login-input" type="text" [(ngModel)]="userName" placeholder="    Email" />
+    <br>
+    <input class="login-input" type="password" [(ngModel)]="password" placeholder="    Password" />
+    <br>
+    <input type="checkbox"/><span>Keep me signed in</span>
+    <br>
+    <input class="login-button" type="button" value ="Login" (click)="loginauth()"/>
+
+</div>
+
 
 
 </div>
